@@ -1,0 +1,58 @@
+  233  gh --version
+  234  gh auth status
+  235  gh auth login
+  236  Mkdir lab9
+  237  mkdir lab9
+  238  cd lab9
+  239  git init
+  240  gh repo create lab9 --public --source=. --remote=origin
+  241  gh repo view --json name,visibility
+  242  gh label create EPIC --color 5319e7 --description "Epic issue"
+  243  gh label list
+  244  gh issue create   --title "do lab9"   --label "EPIC"   --body "Complete Lab 9 tasks."
+  245  gh issue create   --title "create validate-data script"   --label "enhancement"   --assignee "@me"   --body "Create a Bash script to validate name and mobile number."
+  246  gh issue create   --title "create yaml test script"   --label "enhancement"   --assignee "@me"   --body "Create a GitHub Actions workflow to run three validation tests."
+  247  gh issue list
+  248  nano validate-data.sh
+  249  chmod +x validate-data.sh
+  250  ./validate-data.sh "John" "0871234567"
+  251  nano validate-data.sh
+  252  chmod +x validate-data.sh
+  253  ./validate-data.sh "John" "0871234567"
+  254  ./validate-data.sh "ThisNameIsTooLong" "0871234567"
+  255  ./validate-data.sh "Mary" "087123456789"
+  256  mkdir -p .github/workflows
+  257  nano .github/workflows/basictests.yml
+  258  ls -R
+  259  pwd
+  260  ls -R .github
+  261  git branch -M main
+  262  git add .
+  263  git commit -m "Complete lab9 validation and workflow"
+  264  git push -u origin main
+  265  gh auth setup-git
+  266  git push -u origin main
+  267  gh auth refresh -h github.com -s workflow
+  268  gh auth setup-git
+  269  gh auth status
+  270  git push -u origin main
+  271  git branch
+  272  git checkout -b test
+  273  git branch
+  274  nano validate-data.sh
+  275  ./validate-data.sh "John" "0871234567"
+  276  ./validate-data.sh "ThisNameIsDefinitelyTooLong" "0871234567"
+  277  ./validate-data.sh "Mary" "087123456789"
+  278  nano .github/workflows/basictests.yml
+  279  git add validate-data.sh .github/workflows/basictests.yml
+  280  git commit -m "Update validation limit and workflow for test branch"
+  281  git push -u origin test
+  282  cat .github/workflows/basictests.yml
+  283  nano .github/workflows/basictests.yml
+  284  ./validate-data.sh "John" "0871234567"
+  285  ./validate-data.sh "ThisNameIsDefinitelyTooLong" "0871234567"
+  286  ./validate-data.sh "Mary" "087123456789"
+  287  git add .github/workflows/basictests.yml
+  288  git commit -m "Fix validation test for 20 character limit"
+  289  git push origin test
+  290  history>history.txt
