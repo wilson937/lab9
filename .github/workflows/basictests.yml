@@ -2,7 +2,7 @@ name: Lab 9 Basic Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main,test ]
   workflow_dispatch:
 
 jobs:
