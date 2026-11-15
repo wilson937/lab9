@@ -23,7 +23,7 @@ jobs:
           test "$result" = "PASS"
 
           echo "Test 2"
-          result=$(./validate-data.sh "ThisNameIsTooLong" "0871234567")
+          result=$(./validate-data.sh "ThisNameIsDefinitelyTooLong" "0871234567")
           echo "$result"
           test "$result" = "FAIL"
 
